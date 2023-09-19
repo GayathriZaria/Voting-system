@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.LogoImg{
+  width:230px;
+  height:70px;
+  justify-content:space-between;
+}
+
+.Nav{
+  padding:50px;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding:0 130px;
+  background-color:black;
+  background-image: radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 20%), 
+  radial-gradient(at 0% 100%, rgb(88, 85, 86) 0, transparent 60%), 
+  radial-gradient(at 50% 0%, rgb(63, 74, 109) 0, transparent 20%), 
+  radial-gradient(at 50% 50%, rgb(65, 68, 77) 0, transparent 50%), 
+  radial-gradient(at 50% 100%, rgb(63, 74, 109) 0, transparent 20%), 
+  radial-gradient(at 100% 0%, rgb(88, 85, 86) 0, transparent 60%), 
+  radial-gradient(at 100% 100%, rgb(0, 0, 0) 0, transparent 20%);
+  color: #ffffff;
+}
+
+.NavLink{
+  margin: 0 2rem;
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.NavLink:hover{
+     color:aqua;
+}
+
+header .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color:#ffffff;
+  visibility: hidden;
+  opacity: 0;
+  font-size:1.8rem;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width:1124px){
+  header .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  } 
+  
+  header nav{
+    position:fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    flex-direction: column;
+    align-items:center;
+    gap:0;
+    background-image: 
+    radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 100%), 
+    radial-gradient(at 0% 100%, rgb(88, 85, 86) 0, transparent 100%), 
+    radial-gradient(at 50% 0%, rgb(63, 74, 109) 0, transparent 100%), 
+    radial-gradient(at 50% 50%, rgb(65, 68, 77) 0, transparent 100%), 
+    radial-gradient(at 50% 100%, rgb(63, 74, 109) 0, transparent 100%), 
+    radial-gradient(at 100% 0%, rgb(88, 85, 86) 0, transparent 100%), 
+    radial-gradient(at 100% 100%, rgb(0, 0, 0) 0, transparent 100%);
+    transition: 0.3s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav{
+    transform: none;
+  }
+
+  nav .nav-close-btn{
+    position: absolute;
+    top: 2rem;
+    left:2rem; 
+  }
+ 
+  nav .NavLink{
+    font-size:20px;
+    margin: 20px;
+  }
+}
